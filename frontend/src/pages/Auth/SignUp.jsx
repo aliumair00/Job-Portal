@@ -78,7 +78,56 @@ const SignUp = () => {
       }
   }
   return (
-    <div>SignUp</div>
+    <div className=''>
+      <motion.div
+      initial={{opacity:0,
+        y:20
+      }}
+      animate={{
+        opacity:1,
+        y:0
+      }}
+      transition={{
+        duration:0.6
+      }}
+      className=''
+      >
+        <div className=''>
+          <h2>Create Account</h2>
+          <p>Join thousand of professionals finding their dream jobs</p>
+        </div>
+
+        <form action="" onSubmit={handleSubmit}>
+          <div className=''>
+            <label className=''>
+              Full Name *
+            </label>
+            <div className='' >
+              <User className='' />
+              <input 
+              type="text"
+              name='fullName'
+              value={formData.fullName}
+              onChange={handleInputChange}
+              placeholder='Enter your full name'
+              className={`w-full pl-10 pr-4 py-3 rounded-lg border ${formState.errors.fullName ? 'border-red-500' 
+                : 'border-gray-300'} focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                transition-colors `}
+               />
+            </div>
+            {formState.errors.fullName && (
+              <p className="">
+                <AlertCircle className="" />
+                {formState.errors.fullName}
+              </p>
+            )}
+          </div>
+          
+        </form>
+
+      </motion.div>
+    
+    </div>
   )
 }
 

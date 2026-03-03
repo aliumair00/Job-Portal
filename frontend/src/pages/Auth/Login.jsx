@@ -93,7 +93,7 @@ const Login = () => {
           <div className="animate-spin w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full mx-auto  "></div>
           <p className="text-gray-500 mt-2">Redirecting to your dashboard... </p>
 
-        </motion.div>
+        </motion.div> 
         
       </div>
     )
