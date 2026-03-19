@@ -72,7 +72,7 @@ const SignUp = () => {
 
       //  create preview
       const reader = new FileReader();
-      reader.onloadend = (e) => {
+      reader.onloadend = () => {
         setFormState((prev) => ({
           ...prev,
           avatarPreview: reader.result,
@@ -297,7 +297,7 @@ const SignUp = () => {
                 <label
                   htmlFor="avatar"
                   className="cursor-pointer bg-gray-50 border border-gray-300
-                 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300 transition-colors flex items-center space-x-2 "
+                rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300 transition-colors flex items-center space-x-2 "
                 >
                   <Upload className="w-4 h-4" />
                   <span>Upload Photo </span>
